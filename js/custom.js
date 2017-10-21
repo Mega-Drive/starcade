@@ -1,8 +1,33 @@
 /* JS Document */
 
+/******************************
+
+[Table of Contents]
+
+1. Vars and Inits
+2. Set Header
+3. Initialize Main Slider
+4. Initialize Hamburger
+5. Initialize Scrolling
+6. Initialize Projects
+7. Initialize Parallax
+8. Initialize Video
+9. Initialize Progress Bars
+10. Initialize Clients
+11. Initialize Google Map
+
+
+******************************/
+
 jQuery(document).ready(function($)
 {
 	"use strict";
+
+	/* 
+
+	1. Vars and Inits
+
+	*/
 
 	var header = $('.header');
 	var logo = $('.logo');
@@ -39,6 +64,12 @@ jQuery(document).ready(function($)
 	{
 		setHeader();
 	});
+
+	/* 
+
+	2. Set Header
+
+	*/
 
 	function setHeader()
 	{
@@ -120,6 +151,12 @@ jQuery(document).ready(function($)
 			hambActive = false;
 		}
 	}
+
+	/* 
+
+	3. Initialize Main Slider
+
+	*/
 
 	function initMainSlider()
 	{
@@ -217,22 +254,22 @@ jQuery(document).ready(function($)
 		});
 
 		// Custom Autoplay
-		// var sliderTimer = setInterval(function()
-		// {
-		// 	if(!animating)
-		// 	{
-		// 		animating = true;
-		// 		firstparallaxslider.navigate('forth');
-		// 		setTimeout(function()
-		// 		{
-		// 			swiper.slideNext(true, 1000);
-		// 		}, 500);
-		// 		setTimeout(function()
-		// 		{
-		// 			animating = false;
-		// 		}, 1500);
-		// 	}
-		// }, 3000);
+		var sliderTimer = setInterval(function()
+		{
+			if(!animating)
+			{
+				animating = true;
+				firstparallaxslider.navigate('forth');
+				setTimeout(function()
+				{
+					swiper.slideNext(true, 1000);
+				}, 500);
+				setTimeout(function()
+				{
+					animating = false;
+				}, 1500);
+			}
+		}, 8000);
 	};
 
 	function initMainSliderNumber()
@@ -285,6 +322,12 @@ jQuery(document).ready(function($)
 	    return false;
 	}
 
+	/* 
+
+	4. Initialize Hamburger
+
+	*/
+
 	function initHamburger()
 	{
 		hamb.on('click', function()
@@ -327,6 +370,12 @@ jQuery(document).ready(function($)
 			return -60;
 		}
 	}
+
+	/* 
+
+	5. Initialize Scrolling
+
+	*/
 
 	function initScrolling()
 	{
@@ -397,6 +446,12 @@ jQuery(document).ready(function($)
     	});
 	}
 
+	/* 
+
+	6. Initialize Projects
+
+	*/
+
 	function initProjects()
 	{
 		var eles = $('.project');
@@ -417,6 +472,12 @@ jQuery(document).ready(function($)
 		});
 	}
 
+	/* 
+
+	7. Initialize Parallax
+
+	*/
+
 	function initParallax()
 	{
 		var projects = $('.project');
@@ -431,6 +492,12 @@ jQuery(document).ready(function($)
 		});
 	}
 
+	/* 
+
+	8. Initialize Video
+
+	*/
+
 	function initVideo()
 	{
 		$('.video').magnificPopup({
@@ -442,6 +509,12 @@ jQuery(document).ready(function($)
           fixedContentPos: false
         });
 	}
+
+	/* 
+
+	9. Initialize Progress Bars
+
+	*/
 
 	function initProgressBars()
 	{
@@ -495,6 +568,12 @@ jQuery(document).ready(function($)
 		});
 	}
 
+	/* 
+
+	10. Initialize Clients
+
+	*/
+
 	function initClients()
 	{
 		var owl_1 = $('.clients_slider');
@@ -527,6 +606,12 @@ jQuery(document).ready(function($)
 			owl_1.trigger('prev.owl.carousel');
 		});
 	}
+
+	/* 
+
+	11. Initialize Google Map
+
+	*/
 
 	function initGoogleMap()
 	{
